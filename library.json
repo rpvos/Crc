@@ -2,9 +2,10 @@
     "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
     "name": "CRC",
     "version": "1.0.0",
-    "description": "Library containing CRC method.",
+    "description": "Library containing CRC methods.",
     "keywords": [
         "CRC16",
+        "CRC32",
         "Modbus"
     ],
     "repository": {
@@ -27,7 +28,9 @@
         "*"
     ],
     "headers": [
-        "crc16.h"
+        "crc16.hpp",
+        "crc32.hpp",
+        "crc32fast.hpp"
     ],
     "examples": [],
     "dependencies": [],

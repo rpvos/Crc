@@ -1,4 +1,4 @@
-#include "crc16.h"
+#include "crc16.hpp"
 #include <unity.h>
 #include <string.h>
 
@@ -49,11 +49,11 @@ void test_ValidateCrcPerTestset(const uint8_t *testset, const size_t testset_siz
 {
     if (outcome)
     {
-        TEST_ASSERT_TRUE_MESSAGE(Crc::ValidateCrcModbus(testset, testset_size,false), "Validate did not return true");
+        TEST_ASSERT_TRUE_MESSAGE(Crc::ValidateCrc16Modbus(testset, testset_size, false), "Validate did not return true");
     }
     else
     {
-        TEST_ASSERT_FALSE_MESSAGE(Crc::ValidateCrcModbus(testset, testset_size,false), "Validate did not return false");
+        TEST_ASSERT_FALSE_MESSAGE(Crc::ValidateCrc16Modbus(testset, testset_size, false), "Validate did not return false");
     }
 }
 
@@ -73,7 +73,7 @@ void test_AddCrcPerTestset(const uint8_t *testset, const size_t testset_size, bo
     memcpy(testset_without_crc, testset, testset_size - 2);
 
     uint8_t testset_with_crc[testset_size];
-    Crc::AddCrcModbus(testset_without_crc, testset_with_crc, testset_size - 2,false);
+    Crc::AddCrc16Modbus(testset_without_crc, testset_with_crc, testset_size - 2, false);
 
     if (outcome)
     {

@@ -31,7 +31,7 @@ namespace Crc
     }
 
     // Helper function to validate CRC in message
-    bool ValidateCrcModbus(const uint8_t *message, const size_t message_length, bool most_significant_bit_first)
+    bool ValidateCrc16Modbus(const uint8_t *message, const size_t message_length, bool most_significant_bit_first)
     {
         // -2 because CRC is 2 bytes
         uint8_t withoutCRC[message_length - 2];
@@ -61,7 +61,7 @@ namespace Crc
     }
 
     // Helper function to add CRC to message
-    void AddCrcModbus(const uint8_t *message_without_crc, uint8_t *message_with_crc, const size_t message_length_without_crc, bool most_significant_bit_first)
+    void AddCrc16Modbus(const uint8_t *message_without_crc, uint8_t *message_with_crc, const size_t message_length_without_crc, bool most_significant_bit_first)
     {
         uint16_t crc = Crc16Modbus(message_without_crc, message_length_without_crc);
         uint8_t lower_byte_crc = crc & 0xFF;
