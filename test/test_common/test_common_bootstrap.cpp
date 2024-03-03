@@ -1,5 +1,6 @@
 #include <unity.h>
 #include "test_common_crc16.hpp"
+#include "test_common_crc32.hpp"
 
 void setUp(void)
 {
@@ -17,6 +18,7 @@ void RUN_UNITY_TESTS()
     RUN_TEST(test_Crc16);
     RUN_TEST(test_AddCrc);
     RUN_TEST(test_ValidateCrc);
+    RUN_TEST(test_Crc32);
     UNITY_END();
 }
 
