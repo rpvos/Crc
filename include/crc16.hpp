@@ -1,7 +1,8 @@
 #if !defined(CRC16_HPP_)
 #define CRC16_HPP_
+
 #include <stdint.h>
-#include <stdio.h>
+#include <stddef.h>
 
 namespace Crc
 {

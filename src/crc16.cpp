@@ -1,7 +1,5 @@
 #include "crc16.hpp"
 
-#include <stdint.h>
-#include <stdio.h>
 #include <cstring>
 
 namespace Crc
