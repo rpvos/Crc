@@ -1,4 +1,4 @@
-#include "crc16.h"
+#include "crc16.hpp"
 
 #include <stdint.h>
 #include <stdio.h>
