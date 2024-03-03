@@ -13,7 +13,7 @@
 #define CRC32_HPP_
 
 #include <stdint.h>
-#include <stddef.h>
+#include <cstddef>
 
 namespace Crc
 {
