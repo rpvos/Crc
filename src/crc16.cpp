@@ -1,6 +1,10 @@
 #include "crc16.hpp"
 
+#ifdef ARDUINO
+#include <string.h>
+#else
 #include <cstring>
+#endif
 
 namespace Crc
 {
